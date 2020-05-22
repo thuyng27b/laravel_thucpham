@@ -3,7 +3,7 @@
             <div class="col-md-3">
                 <p class="dam">LIÊN HỆ VỚI CHÚNG TÔI</p>
                 <div class="row">
-                    <img src="{{('public/img/img_index/image-20.jpg')}}">
+                    <img src="img/img_index/image-20.jpg">
                 </div>              
                 <br>
                 <br>
@@ -17,27 +17,28 @@
             <div class="col-md-3">
                 <p class="dam">THỰC PHẨM VÀ SỨC KHỎE</p><br>
                 <div class="row" id="footer1">
-                    <img src="{{('public/img/img_index/image-21.jpg')}}">
-                    <img src="{{('public/img/img_index/image-24.jpg')}}">
-                    <img src="{{('public/img/img_index/image-25.jpg')}}">
+                    <img src="img/img_index/image-21.jpg">
+                    <img src="img/img_index/image-24.jpg">
+                    <img src="img/img_index/image-25.jpg">
                 </div>
                 <div class="row" id="footer1">
-                    <img src="{{('public/img/img_index/image-22.jpg')}}">
-                    <img src="{{('public/img/img_index/image-26.jpg')}}">
-                    <img src="{{('public/img/img_index/image-27.jpg')}}">
+                    <img src="img/img_index/image-22.jpg">
+                    <img src="img/img_index/image-26.jpg">
+                    <img src="img/img_index/image-27.jpg">
                 </div>
                 <div class="row" id="footer1">
-                    <img src="{{('public/img/img_index/image-23.jpg')}}">
-                    <img src="{{('public/img/img_index/image-28.jpg')}}">
-                    <img src="{{('public/img/img_index/image-29.jpg')}}">
+                    <img src="img/img_index/image-23.jpg">
+                    <img src="img/img_index/image-28.jpg">
+                    <img src="img/img_index/image-29.jpg">
                 </div>
                 <br>
                 <p class="dam">THEO DÕI CHÚNG TÔI TẠI:
                 </p>
                 <div class="row">
-                <a href="#" title=""><img src="{{('public/img/icon/Facebook_icon.jpg')}}" alt=""></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="#" title=""><img src="{{('public/img/icon/gg.png')}}" alt=""></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="#" title=""><img src="{{('public/img/icon/line.png')}}" alt=""></a>
+                <a href="#" title=""><img src="img/icon/Facebook_icon.jpg" alt=""></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#" title=""><img src="img/icon/gg.png" alt=""></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#" title=""><img src="img/icon/line.png
+                    " alt=""></a>
             </div>
         
         </div>

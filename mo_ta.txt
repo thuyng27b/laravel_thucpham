@@ -1,0 +1,107 @@
+ Website bán thực phẩm sạch
+
+1. Mô tả hệ thống
+• Đề tài: Online Shopping - dự án là 1 trang web bán thực phẩm sạch: hoa quả và rau củ. 
+• Mô tả giao diện trang chủ: hiển thị toàn bộ những nội dung chính của website. 
+Nơi có thể thực hiện tất cả các công việc mà bạn muốn bằng cách click vào những mục chọn tương ứng, hệ thống sẽ liên kết đến các trang tương ứng đáp ứng yêu cầu của bạn
+Đầu trang Web là phần tìm kiếm giúp khách hàng dễ dàng tìm kiếm sản phẩm muốn mua.
+Góc bên phải là phần đăng ký, đăng nhập vào hệ thống.
+Ở giữa là menu ngang liệt kê các danh mục: Trang chủ, menu sản phẩm, giới thiệu về website. Trong phần menu sản phẩm khi bạn di chuột vào sẽ hiển thị menu dọc danh mục các loại sản phẩm có trên website như: Trái cây, Rau xanh, 
+Phía dưới sẽ là slide ảnh với chủ đề thực phẩm sạch.
+Giữa trang sẽ hiển thị lên các sản phẩm nổi bật được khách hàng lựa chọn nhiều nhất
+Cuối trang là phần giới thiệu , trang liên kết, hỗ trợ khách hàng,…
+• Các chức năng chính: đăng ký, đăng nhập, tìm kiếm, xem chi tiết sản phẩm, giỏ hàng, thanh toán. 
+• Công cụ sử dụng: Laravel, MySQL và Công cụ lập trình SubLime Text. 
+
+2. Mô tả chức năng 
+2.1 Đăng ký
+- Để trở thành thành viên website cũng như bạn hàng của công ty khách hàng phải đăng ký tài khoản nhằm mục đích quản lý thông tin của khách hàng.
+  Thông tin khách hàng sẽ được lưu vào Database.
+- Khi điền xong các thông tin về : Họ tên,username,địa chỉ, email, sdt,mật khẩu,khách hàng nhấn “Đăng ký” để đăng ký tài khoản trên website.
+  Hệ thống sẽ hiển thị thông báo cho khách hàng.
+2.2 Đăng nhập
+- khách hàng đăng nhập bằng tài khoản đã được đăng ký trước
+  Tài khoản bao gồm: tên đăng nhập và mật khẩu. Trong đó mật khẩu đã được mã hóa bằng ký tự
+2.3 Tìm kiếm
+- để tiết kiệm thời gian tìm kiếm món hàng mình muốn mua, khách hàng có thể nhập từ khóa trên thanh tìm kiếm
+2.4 Xem chi tiết sản phẩm
+- Mỗi sản phẩm đều có phần hiển thị chi tiết
+  click vào 'Chi tiết' để xem các thông tin về sản phẩm
+- Chi tiết sản phẩm bao gồm: hình ảnh, tên, giá tiền, thông tin vận chuyển, button 'Thêm vào giỏ hàng' và thông tin chi tiết
+2.5 Giỏ hàng
+- Khách hàng chọn sản phẩm cần mua từ danh mục các mặt hàng, click vào icon giỏ hàng
+- Giỏ hàng hiển thị các thông tin: Tên sản phẩm, ảnh, đơn giá, số lượng, sl kho, Thành tiền, xóa giỏ hàng, tổng tiền
+2.6 Thanh toán
+- Để thanh toán, vào giỏ hãng, kiểm tra sản phẩm cần mua rồi click 'Xác nhận đơn hàng'
+- Thông tin giao hàng phải được điền đầy đủ. Nếu đã đăng nhập tài khoản từ trước, thông tin giao hàng sẽ được điền tự động
+
+3. Cơ sở dữ liệu
+3.1. Các bảng dữ liệu
+6 bảng
+- users: Thông tin người sử dụng hệ thống, chức các thông tin:
+         + id
+         + full_name
+         + users_name
+         + email
+         + password
+         + phone
+         + address
+         + image
+         + remember_token
+- khach_hang: Thông tin người mua sản phẩm
+         + id
+         + ten_kh
+         + email
+         + dia_chi
+         + sđt
+         + note
+- bill_ban: Thông tin đơn hàng
+         + id
+         + id_kh
+         + date_order
+         + tong_tien
+         + payment
+         + status
+         + note
+- bill_detail_ban: Thông tin chi tiết đơn hàng
+         + id
+         + id_bill_ban
+         + id_sp
+         + sl
+- loai_sp: Thông tin về loại sản phẩm
+         + id
+         + tenloai
+- san_pham: Thông tin chi tiết về sản phẩm
+         + id
+         + name
+         + id_loai_sp
+         + mota_sp
+         + unit_price
+         + gia_km
+         + so_luong
+         + image
+         + don_vi_tinh
+3.2 Các lệnh SQL sử dụng
+
+3.2.1 Lệnh Create table:
+CREATE TABLE `bills_ban` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `id_kh` int(11) DEFAULT NULL,
+  `date_order` date DEFAULT NULL,
+  `tong_tien` float DEFAULT NULL COMMENT 'tổng tiền',
+  `payment` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL COMMENT 'hình thức thanh toán',
+  `status` varchar(20) NOT NULL,
+  `note` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+3.2.2 Lệnh INSERT INTO
+INSERT INTO `bills_ban` (`id`, `id_kh`, `date_order`, `tong_tien`, `payment`, `status`, `note`, `created_at`, `updated_at`) VALUES
+(20, 32, '2019-05-06', 20000, 'on', '0', NULL, '2019-12-12 07:17:57', '2019-12-12 00:17:57'),
+
+3.2.3 Lệnh ADD PRIMARY KEY
+ALTER TABLE `bills_ban`
+  ADD PRIMARY KEY (`id`);
+

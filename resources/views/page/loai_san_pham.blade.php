@@ -8,7 +8,7 @@
 </div>
 <div class="container-fluid" id="" style="padding-top:0px;padding-bottom: 70px">
     <div class="row" id="icon_nen" style="margin-top:-40px">
-         <img src="public/img/img_index/icon.png" alt="icon" id="icon">
+         <img src="img/img_index/icon.png" alt="icon" id="icon">
        <h3>Danh sách sản phẩm</h3>
        <hr>
     </div>
@@ -19,7 +19,7 @@
                  <div class="row">
                     
                     <a href="{{ route('chi-tiet-san-pham',$sp->id) }}" title="" id="text-decoration">
-                        <img src="public/upload/sanpham/{{ $sp->image }}" alt=""></a>
+                        <img src="upload/sanpham/{{ $sp->image }}" alt=""></a>
                         <p class="ten">{{ $sp->name }}</p>
                         
                          

@@ -1,5 +1,5 @@
  <div class="row" id="head_menu">
-            <img src="{{('public/img/img_index/logo.png')}}" id="logo" alt="logo" class="animated inifinite bounceInLeft">
+            <img src="img/img_index/logo.png" id="logo" alt="logo" class="animated inifinite bounceInLeft">
             <form role="search" action="{{ route('search') }}" method="get" accept-charset="utf-8">
                 <input type="text" id="ip_seach" name="key" value="" placeholder="  Tìm kiếm... " class="animated inifinite bounceInDown">
             <button type="submit" class="fa fa-search" style="height: 34px;border-radius: 5px;border:1px solid #EEE;background-color: #EEE"></button>

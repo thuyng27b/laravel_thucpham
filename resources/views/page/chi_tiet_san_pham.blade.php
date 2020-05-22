@@ -3,14 +3,14 @@
     <div class="container" id="chitiet" style="background-color: #FFF">
         <div class="col-md-1">
             {{-- <div class="row">
-                <img src="public/upload/sanpham/{{ $sp->image }}" alt="ảnh {{ $sp->name }}">
+                <img src="upload/sanpham/{{ $sp->image }}" alt="ảnh {{ $sp->name }}">
             </div>
             <div class="row">
-                 <img src="publicc/upload/sanpham/{{ $sp->image }}" alt="ảnh {{ $sp->name }}">
+                 <img src="upload/sanpham/{{ $sp->image }}" alt="ảnh {{ $sp->name }}">
             </div> --}}
         </div>
         <div class="col-md-5">
-             <img src="public/upload/sanpham/{{ $sp->image }}" alt="ảnh {{ $sp->name }}" id="anhchitiet">
+             <img src="upload/sanpham/{{ $sp->image }}" alt="ảnh {{ $sp->name }}" id="anhchitiet">
         </div>
         <div class="col-md-offset-1 col-md-4" id="thongtindongia">
             <h3 style="font-size:30px">{{ $sp->name }}</h3>
@@ -46,7 +46,7 @@
 </div>
 
 <div class="row" id="icon_nen" >
-    <img src="public/source/img/img_index/icon.png" alt="icon" id="icon" >
+    <img src="img/img_index/icon.png" alt="icon" id="icon" >
     <h3 id="">Sản phẩm tương tự</h3>
     <hr>
 </div>
@@ -61,7 +61,7 @@
                     <div class="ribbon"><span>SALE</span></div>
                     @endif
                     <a href="{{ route('chi-tiet-san-pham',$new->id) }}" title="" id="text-decoration">
-                        <img src="public/upload/sanpham/{{ $new->image }}" alt=""></a>
+                        <img src="upload/sanpham/{{ $new->image }}" alt=""></a>
                         <p class="ten">{{ $new->name }}</p>
                         @if($new->gia_km!=0)
                          <lable class="giacu">{{number_format($new->unit_price,0,',','.') }}&nbsp;đ</lable>&nbsp;

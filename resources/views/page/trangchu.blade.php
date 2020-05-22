@@ -12,13 +12,13 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
                     <div class="item active">
-                        <img src="{{('public/img/img_index/image-2.jpg')}}" alt="Los Angeles">
+                        <img src="img/img_index/image-2.jpg" alt="Los Angeles">
                     </div>
                     <div class="item">
-                        <img src="{{('public/img/img_index/image-3.jpg')}}" alt="Chicago">
+                        <img src="img/img_index/image-3.jpg" alt="Chicago">
                     </div>
                     <div class="item">
-                        <img src="{{('public/img/img_index/image-1-1.jpg')}}" alt="Chicago">
+                        <img src="img/img_index/image-1-1.jpg" alt="Chicago">
                     </div>
                 </div>
 
@@ -40,7 +40,7 @@
 <!--  end content -->
 
 <div class="row" id="icon_nen">
-    <img src="{{('public/img/img_index/icon.png')}}" alt="icon" id="icon" class="animated inifinite fadeInDown">
+    <img src="img/img_index/icon.png" alt="icon" id="icon" class="animated inifinite fadeInDown">
     <h3 id="" class="animated inifinite fadeInDown">Sản phẩm nổi bật</h3>
     <hr>
 </div>
@@ -54,7 +54,7 @@
                     <div class="ribbon"><span>SALE</span></div>
                     @endif
                    <a href="{{ route('chi-tiet-san-pham',$pr1->id) }}" title="" id="text-decoration">
-                        <img src="public/upload/sanpham/{{ $pr1->image }}" alt=""></a>
+                        <img src="upload/sanpham/{{ $pr1->image }}" alt=""></a>
                         <p class="ten">{{ $pr1->name }}</p>
                         @if($pr1->gia_km!=0)
                          <lable class="giacu">{{number_format($pr1->unit_price,0,',','.') }}&nbsp;đ</lable>&nbsp;
@@ -81,7 +81,7 @@
 <div class="row" id="next_heads">
     <div class="container" id="" class="animated inifinite bounceInLeft">
         <div class="col-md-5">
-            <img src="{{('public/img/img_index/image-9.png')}}" class="animated inifinite bounceInLeft">
+            <img src="img/img_index/image-9.png" class="animated inifinite bounceInLeft">
         </div>
         <div class="col-md-offset-1 col-md-6">
             <h1 class="animated inifinite bounceInRight">Thông tin<br>Về cửa hàng</h1>

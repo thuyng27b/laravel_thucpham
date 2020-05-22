@@ -47,21 +47,17 @@ Route::get("khachhang",['as'=>'ds-kh','uses'=>'KhachHangController@getds_kh']);
 
 
 //quan li user
-Route::get("dangky",['as'=>'dang-ky','uses'=>'UsersController@getdangky']);
-Route::post("dangky",['as'=>'dang-ky','uses'=>'UsersController@postdangky']);
+Route::get("dangky",['as'=>'dang-ky','uses'=>'PageController@getdangky']);
+Route::post("dangky",['as'=>'dang-ky','uses'=>'PageController@postdangky']);
 
 Route::get("taikhoan",['as'=>'ds-tk','uses'=>'UsersController@getds_tk']);
-Route::get("suatk/{id}",[
-	'as'=>'sua-user',
-	'uses'=>'UsersController@getsua'
-]);
+
 // Route::post("suatk/{id}",[
 // 	'as'=>'post-sua-tk',
 // 	'uses'=>'UsersController@postSua'
 // ]);
 
 //quan li nhan vien
-Route::get("nhanvien",['as'=>'ds-nv','uses'=>'NhanVienController@getds_nv']);
 
 
 
@@ -73,4 +69,3 @@ Route::get("chitiet_ban/{id}",'BillBanController@getct_hd');
 Route::get("duyet/{id}",'BillBanController@duyet');
 
 //pdf
-Route::get('pdf_hoadon/{id}','ThongKeController@PDF');

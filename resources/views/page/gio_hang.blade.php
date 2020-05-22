@@ -38,7 +38,7 @@
                         <td>{{ $item->name }}
                             <p style="display:none">{{ $item->id }}</p>
                         </td>
-                        <td><img src="public/upload/sanpham/{{ $item->options->img }}" alt="" style="height: 120px;width: 120px"></td>
+                        <td><img src="upload/sanpham/{{ $item->options->img }}" alt="" style="height: 120px;width: 120px"></td>
                         <td style="color:red">{{ number_format($item->price,0,',','.') }}
                             <p style="color:#444">/&nbsp;&nbsp;{{ $item->options->dv }}</p>
                         </td>
